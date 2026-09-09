@@ -5,14 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portfolio - ชื่อของคุณ</title>
+  <title>Portfolio - โชติกา ปารีเสน</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* =========================
-       พื้นฐาน
-    ========================= */
     * {
       margin: 0;
       padding: 0;
@@ -25,9 +22,7 @@
       color: #1e293b;
     }
 
-    /* =========================
-       Navigation
-    ========================= */
+    /* Navigation */
     nav {
       background: #0f172a;
       padding: 16px 32px;
@@ -55,72 +50,55 @@
       color: #94a3b8;
       text-decoration: none;
       font-size: 14px;
+      transition: color 0.2s;
     }
 
     nav ul li a:hover {
       color: white;
     }
 
-    /* =========================
-       Hero
-    ========================= */
+    /* Hero */
     .hero {
       background: linear-gradient(135deg, #0f172a, #1e1b4b);
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 70px 20px;
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 4px solid #6366f1;
       margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 30px rgba(99,102,241,0.4);
     }
 
     .hero h1 {
       font-size: 36px;
       font-weight: 800;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
-    .hero .tagline {
-      color: #818cf8;
+    .hero p {
       font-size: 18px;
-      margin-bottom: 24px;
+      color: #c7d2fe;
     }
 
-    .hero-btns {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-    }
-
-    .btn-primary {
-      padding: 12px 24px;
-      background: #6366f1;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       Container
-    ========================= */
+    /* Container */
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
     }
 
+    .section {
+      margin-bottom: 45px;
+    }
+
     .section-title {
-      font-size: 24px;
+      font-size: 25px;
       font-weight: 800;
       color: #1e293b;
       margin-bottom: 20px;
@@ -128,15 +106,53 @@
       border-bottom: 2px solid #e2e8f0;
     }
 
-    .about-text {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #475569;
+    /* About */
+    .about-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      line-height: 1.9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    /* =========================
-       Skills
-    ========================= */
+    .info-list {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .info-list li {
+      margin-bottom: 8px;
+    }
+
+    .info-list strong {
+      color: #4f46e5;
+    }
+
+    /* Interest */
+    .interest-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .interest-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .interest-card h3 {
+      margin-bottom: 8px;
+      color: #3730a3;
+    }
+
+    .interest-card p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* Skills */
     .skills-wrap {
       display: flex;
       flex-wrap: wrap;
@@ -146,26 +162,25 @@
     .skill-badge {
       background: #6366f1;
       color: white;
-      padding: 6px 16px;
+      padding: 8px 18px;
       border-radius: 99px;
       font-size: 14px;
       font-weight: 600;
     }
 
-    /* =========================
-       Projects
-    ========================= */
-    .card-grid {
+    /* Projects */
+    .project-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 18px;
     }
 
     .project-card {
       background: white;
       border-radius: 12px;
-      padding: 20px;
+      padding: 22px;
       border: 1px solid #e2e8f0;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .project-card:hover {
@@ -175,65 +190,44 @@
 
     .project-card h3 {
       color: #1e293b;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .project-card p {
       color: #64748b;
       font-size: 14px;
+      line-height: 1.7;
     }
 
-    /* =========================
-       Flexbox Cards
-    ========================= */
-    .card-row {
-      display: flex;
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .card {
-      flex: 1;
+    /* Contact */
+    .contact-box {
       background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 8px;
+      padding: 25px;
+      border-radius: 12px;
+      line-height: 2;
     }
 
-    .card-icon {
-      font-size: 36px;
+    .contact-box a {
+      color: #4f46e5;
+      text-decoration: none;
     }
 
-    .card h3 {
-      color: #374151;
+    .contact-box a:hover {
+      text-decoration: underline;
     }
 
-    .card p {
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    /* =========================
-       Footer
-    ========================= */
+    /* Footer */
     footer {
       background: #0f172a;
-      color: #64748b;
+      color: #94a3b8;
       text-align: center;
-      padding: 24px;
+      padding: 25px;
       font-size: 14px;
     }
 
-    /* =========================
-       Responsive
-    ========================= */
+    /* Responsive */
     @media (max-width: 600px) {
+
       nav {
         padding: 14px 16px;
       }
@@ -242,15 +236,20 @@
         gap: 10px;
       }
 
+      nav ul li a {
+        font-size: 12px;
+      }
+
       .hero h1 {
         font-size: 28px;
       }
 
-      .card-row {
-        flex-direction: column;
+      .hero p {
+        font-size: 16px;
       }
 
-      .card-grid {
+      .interest-list,
+      .project-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -259,14 +258,13 @@
 
 <body>
 
-  <!-- =========================
-       Navigation
-  ========================= -->
+  <!-- Navigation -->
   <nav>
-    <div class="logo">🎓 [ชื่อย่อ]</div>
+    <div class="logo">🎓 โชติกา ปารีเสน</div>
 
     <ul>
-      <li><a href="#about">เกี่ยวกับ</a></li>
+      <li><a href="#about">เกี่ยวกับฉัน</a></li>
+      <li><a href="#interest">ความสนใจ</a></li>
       <li><a href="#skills">ทักษะ</a></li>
       <li><a href="#projects">ผลงาน</a></li>
       <li><a href="#contact">ติดต่อ</a></li>
@@ -274,252 +272,155 @@
   </nav>
 
 
-  <!-- =========================
-       Hero
-  ========================= -->
+  <!-- Hero -->
   <section class="hero">
 
+    <!-- เปลี่ยน URL รูปตรงนี้เป็นรูปของคุณ -->
     <img
       class="avatar"
-      src="https://api.dicebear.com/7.x/avataaars/svg?seed=student"
-      alt="รูปโปรไฟล์"
+      src="https://api.dicebear.com/7.x/avataaars/svg?seed=Chotika"
+      alt="รูปโปรไฟล์ โชติกา ปารีเสน"
     >
 
-    <h1>สวัสดีครับ/ค่ะ ผม/หนู [ชื่อ-นามสกุล] 👋</h1>
+    <h1>โชติกา ปารีเสน 👋</h1>
 
-    <p class="tagline">
-      นักศึกษา IT · Web Developer มือใหม่
+    <p>
+      นักศึกษาคณะครุศาสตร์ สาขาคอมพิวเตอร์
     </p>
-
-    <div class="hero-btns">
-      <a class="btn-primary" href="#projects">
-        ดูผลงาน
-      </a>
-    </div>
 
   </section>
 
 
-  <!-- =========================
-       เนื้อหาหลัก
-  ========================= -->
   <main class="container">
 
     <!-- เกี่ยวกับฉัน -->
-    <section id="about">
+    <section class="section" id="about">
 
       <h2 class="section-title">
-        เกี่ยวกับฉัน
+        👩🏻‍💻 เกี่ยวกับฉัน
       </h2>
 
-      <p class="about-text">
-        สวัสดีครับ/ค่ะ ผม/หนู [ชื่อ]
-        กำลังศึกษาที่ [ชื่อสถาบัน]
-        สาขา [สาขา]
-        ชั้นปีที่ [ปี]
-        มีความสนใจด้านการพัฒนาเว็บไซต์
-      </p>
+      <div class="about-box">
+
+        <p>
+          เป็นนักศึกษาชั้นปีที่ 3 สาขาคอมพิวเตอร์
+          คณะครุศาสตร์ มหาวิทยาลัยราชภัฏมหาสารคาม
+          มีความสนใจด้านเทคโนโลยีและการออกแบบสื่อการเรียนรู้
+          โดยนำความรู้ด้านคอมพิวเตอร์มาประยุกต์ใช้ในการจัดการเรียนการสอน
+          และพัฒนาทักษะของตนเองอยู่เสมอ
+        </p>
+
+        <ul class="info-list">
+          <li>
+            <strong>มหาวิทยาลัย:</strong>
+            มหาวิทยาลัยราชภัฏมหาสารคาม
+          </li>
+
+          <li>
+            <strong>คณะ:</strong>
+            ครุศาสตร์
+          </li>
+
+          <li>
+            <strong>สาขา:</strong>
+            คอมพิวเตอร์
+          </li>
+
+          <li>
+            <strong>ชั้นปี:</strong>
+            3
+          </li>
+        </ul>
+
+      </div>
 
     </section>
 
 
-    <!-- =========================
-         HTML Tags พื้นฐาน
-    ========================= -->
-    <section style="margin-top:40px">
+    <!-- ความสนใจ -->
+    <section class="section" id="interest">
 
       <h2 class="section-title">
-        HTML Tags พื้นฐาน
+        💡 ความสนใจ
       </h2>
 
-      <h3>ข้อมูลเบื้องต้น</h3>
+      <div class="interest-list">
 
-      <p>
-        ชื่อ:
-        <strong>ใส่ชื่อของคุณ</strong>
-      </p>
+        <div class="interest-card">
+          <h3>💻 การพัฒนาเว็บไซต์</h3>
+          <p>
+            สนใจเรียนรู้การสร้างและออกแบบเว็บไซต์
+            ด้วย HTML และ CSS
+          </p>
+        </div>
 
-      <p>
-        สาขา:
-        <em>เทคโนโลยีสารสนเทศ</em>
-      </p>
+        <div class="interest-card">
+          <h3>🎨 สื่อการเรียนรู้</h3>
+          <p>
+            สนใจการออกแบบสื่อและกิจกรรม
+            เพื่อใช้ประกอบการเรียนการสอน
+          </p>
+        </div>
 
-      <hr>
+        <div class="interest-card">
+          <h3>📚 เทคโนโลยีเพื่อการศึกษา</h3>
+          <p>
+            สนใจการนำเทคโนโลยีและเครื่องมือดิจิทัล
+            มาประยุกต์ใช้ในการจัดการเรียนรู้
+          </p>
+        </div>
 
-      <h3 style="margin-top:20px;">
-        ทักษะที่มี
-      </h3>
+        <div class="interest-card">
+          <h3>🧩 การเขียนโปรแกรม</h3>
+          <p>
+            สนใจการฝึกคิดอย่างเป็นขั้นตอน
+            และการแก้ปัญหาด้วยการเขียนโปรแกรม
+          </p>
+        </div>
 
-      <ul style="margin:10px 0 20px 25px;">
-        <li>HTML5</li>
-        <li>CSS</li>
-        <li>JavaScript (กำลังเรียน)</li>
-      </ul>
-
-      <h3>แผนการเรียน</h3>
-
-      <ol style="margin:10px 0 0 25px;">
-        <li>เรียน HTML พื้นฐาน</li>
-        <li>เรียน CSS</li>
-        <li>สร้าง Portfolio</li>
-      </ol>
+      </div>
 
     </section>
 
 
-    <!-- =========================
-         Links & Images
-    ========================= -->
-    <section style="margin-top:40px">
+    <!-- ทักษะ -->
+    <section class="section" id="skills">
 
       <h2 class="section-title">
-        Links & Images
-      </h2>
-
-      <figure>
-
-        <img
-          src="https://via.placeholder.com/150"
-          alt="รูปโปรไฟล์"
-          width="150"
-        >
-
-        <figcaption>
-          รูปโปรไฟล์
-        </figcaption>
-
-      </figure>
-
-      <p style="margin-top:15px;">
-        สวัสดีครับ/ค่ะ
-        ผม/หนูชื่อ [ชื่อของคุณ]
-      </p>
-
-      <p style="margin-top:10px;">
-        📧
-        <a href="mailto:your@email.com">
-          your@email.com
-        </a>
-      </p>
-
-      <p style="margin-top:10px;">
-        💻
-        <a href="https://github.com" target="_blank">
-          GitHub ของฉัน
-        </a>
-      </p>
-
-    </section>
-
-
-    <!-- =========================
-         Skills
-    ========================= -->
-    <section id="skills" style="margin-top:40px">
-
-      <h2 class="section-title">
-        ทักษะ
+        🛠️ ทักษะ
       </h2>
 
       <div class="skills-wrap">
 
-        <span class="skill-badge">HTML5</span>
-        <span class="skill-badge">CSS3</span>
-        <span class="skill-badge">Flexbox</span>
-        <span class="skill-badge">XAMPP</span>
-        <span class="skill-badge">[ทักษะของคุณ]</span>
+        <span class="skill-badge">HTML</span>
+        <span class="skill-badge">CSS</span>
+        <span class="skill-badge">Google Classroom</span>
+        <span class="skill-badge">Padlet</span>
+        <span class="skill-badge">Blockly</span>
+        <span class="skill-badge">Canva</span>
 
       </div>
 
     </section>
 
 
-    <!-- =========================
-         Flexbox Layout
-    ========================= -->
-    <section style="margin-top:40px">
+    <!-- ผลงาน -->
+    <section class="section" id="projects">
 
       <h2 class="section-title">
-        Flexbox Layout
+        📁 ผลงาน
       </h2>
 
-      <div class="card-row">
-
-        <div class="card">
-
-          <div class="card-icon">
-            💻
-          </div>
-
-          <h3>
-            Web Design
-          </h3>
-
-          <p>
-            ออกแบบเว็บด้วย HTML & CSS
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">
-            🎨
-          </div>
-
-          <h3>
-            UI Design
-          </h3>
-
-          <p>
-            สร้าง User Interface สวยงาม
-          </p>
-
-        </div>
-
-
-        <div class="card">
-
-          <div class="card-icon">
-            📱
-          </div>
-
-          <h3>
-            Responsive
-          </h3>
-
-          <p>
-            รองรับทุกขนาดหน้าจอ
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         Projects
-    ========================= -->
-    <section id="projects" style="margin-top:40px">
-
-      <h2 class="section-title">
-        ผลงาน
-      </h2>
-
-      <div class="card-grid">
+      <div class="project-grid">
 
         <div class="project-card">
 
-          <h3>
-            🌐 Portfolio Website
-          </h3>
+          <h3>🌐 เว็บไซต์ Portfolio ส่วนตัว</h3>
 
           <p>
-            เว็บ Portfolio ส่วนตัว
-            สร้างด้วย HTML5 & CSS
+            ออกแบบและพัฒนาเว็บไซต์ Portfolio
+            เพื่อรวบรวมข้อมูลส่วนตัว ทักษะ และผลงาน
+            โดยใช้ HTML และ CSS
           </p>
 
         </div>
@@ -527,13 +428,37 @@
 
         <div class="project-card">
 
-          <h3>
-            📝 [Project ของคุณ]
-          </h3>
+          <h3>📚 สื่อการเรียนรู้วิชาวิทยาการคำนวณ</h3>
 
           <p>
-            ใส่คำอธิบาย project
-            ที่คุณสร้าง
+            ออกแบบสื่อและกิจกรรมการเรียนรู้
+            สำหรับใช้ประกอบการจัดการเรียนการสอน
+            วิชาวิทยาการคำนวณ
+          </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <h3>🧩 กิจกรรมการเรียนรู้ด้วย Blockly</h3>
+
+          <p>
+            จัดกิจกรรมให้นักเรียนฝึกการคิดเป็นลำดับ
+            และการแก้ปัญหาผ่านโปรแกรม Blockly
+          </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <h3>💻 การใช้เครื่องมือดิจิทัลเพื่อการเรียนรู้</h3>
+
+          <p>
+            ประยุกต์ใช้ Google Classroom และ Padlet
+            เพื่อสนับสนุนการจัดกิจกรรม
+            และการส่งงานของนักเรียน
           </p>
 
         </div>
@@ -543,40 +468,41 @@
     </section>
 
 
-    <!-- =========================
-         Contact
-    ========================= -->
-    <section id="contact" style="margin-top:40px">
+    <!-- ติดต่อ -->
+    <section class="section" id="contact">
 
       <h2 class="section-title">
-        ติดต่อฉัน
+        📩 ติดต่อ
       </h2>
 
-      <p>
-        📧 Email:
-        <a href="mailto:your@email.com">
-          your@email.com
-        </a>
-      </p>
+      <div class="contact-box">
 
-      <p style="margin-top:8px;">
-        📱 Line ID:
-        [Line ID ของคุณ]
-      </p>
+        <p>
+          📧 Email:
+          <a href="mailto:wanida04022548@gamil.com">
+            wanida04022548@gamil.com
+          </a>
+        </p>
+
+        <p>
+          📘 Facebook:
+          <a href="#">
+            Chotika Pareesen
+          </a>
+        </p>
+
+      </div>
 
     </section>
 
   </main>
 
 
-  <!-- =========================
-       Footer
-  ========================= -->
+  <!-- Footer -->
   <footer>
 
     <p>
-      © 2026 [ชื่อของคุณ]
-      สร้างด้วย ❤️ และ HTML/CSS
+      © 2026 โชติกา ปารีเสน
     </p>
 
   </footer>
